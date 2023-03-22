@@ -1,6 +1,10 @@
 import mongoose from "mongoose";
 
 export const User = {
+  _id: {
+    type: String,
+    default: nanoid(),
+  },
   name: {
     type: String,
     required: true,
@@ -9,6 +13,10 @@ export const User = {
   email: {
     type: String,
     unique: true,
+  },
+  role: {
+    type: String,
+    ref: "UserRole",
   },
 };
 

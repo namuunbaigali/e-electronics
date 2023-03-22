@@ -1,5 +1,5 @@
-import Footer from "./components/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Footer from "./components/Footer.jsx";
 
 export default function App() {
   return <Footer />;

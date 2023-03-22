@@ -5,40 +5,89 @@ import Col from "react-bootstrap/Col";
 import InputGroup from "react-bootstrap/InputGroup";
 import Form from "react-bootstrap/Form";
 import { HiPaperAirplane } from "react-icons/hi";
+import { FcGoogle } from "react-icons/fc";
+import { CiFacebook } from "react-icons/ci";
+import Style from "../styles/Footer.css";
+import { RiSendPlaneFill } from "react-icons/ri";
+import Button from "react-bootstrap/Button";
+import head from "../Icon/headIcon.svg";
+import logo from "../Icon/Logo.svg";
+import footerJSON from "../json/footerJSON.json";
 
 export default function Footer() {
   return (
-    <div className="w=100% bg-secondary h-500 d-flex justify-content-center rounded">
+    <div className="footer">
       <Container>
-        <Row className="bg-dark text-white mt-5 mb-3">
-          <Row className="py-3 bg-white">
-            <Col className="text-primary"> Subscribe newsletter</Col>
-            <Col>
-              {" "}
-              <InputGroup className="bg-secondary rounded">
-                <Form.Control placeholder="Email address" />
-                <InputGroup.Text id="basic-addon2">
-                  <HiPaperAirplane />
-                </InputGroup.Text>
-              </InputGroup>
-            </Col>
-
-            <Col className="text-primary">
-              Call us 24/7 : (+62) 0123 567 789
-            </Col>
-          </Row>
-        </Row>
-        <Row className="bg-dark text-white">
+        <Row className=" my-3 py-3 px-5 bg-white newsLetter d-flex align-items-center">
+          <Col className="fw-bold col-4"> Subscribe newsletter</Col>
           <Col>
-            <Row>
-              <Col>fdf</Col>
-              <Col>fdf</Col>
-              <Col>fdf</Col>
-            </Row>
+            <InputGroup className="mb-3">
+              <Form.Control
+                placeholder="Email address"
+                className="bg-warning"
+              />
+              <Button
+                variant="outline-secondary"
+                id="button-addon2"
+                className="bg-warning"
+              >
+                <RiSendPlaneFill />
+              </Button>
+            </InputGroup>
           </Col>
-          <Col>1 of 1</Col>
-          <Col>1 of 1</Col>
-          <Col>1 of 1</Col>
+
+          <Col className="text-primary d-flex">
+            <Col className="col-3">
+              <img src={head} alt="" />
+            </Col>
+            <Col className="col-9">Call us 24/7 : (+62) 0123 567 789</Col>
+          </Col>
+        </Row>
+
+        <Row className="d-flexjustify-content-between ">
+          <Row className="col-3">
+            <img src={logo} alt="" className="pb-3" />
+            <p>64 st james boulevard hoswick , ze2 7zj</p>
+            <hr />
+            <Row>
+              <FcGoogle className="col-4" />
+              <CiFacebook className="col-4" />
+              <CiFacebook className="col-4" />
+            </Row>
+          </Row>
+
+          <ul className="col-3">
+            <h6> Find product</h6>
+            {footerJSON.find.map((item) => {
+              return (
+                <li>
+                  <a href="#">{item.name}</a>
+                </li>
+              );
+            })}
+          </ul>
+
+          <ul className="col-3">
+            <h6> Get help</h6>
+            {footerJSON.get.map((item) => {
+              return (
+                <li>
+                  <a href="#">{item.name}</a>
+                </li>
+              );
+            })}
+          </ul>
+
+          <ul className="col-3">
+            <h6>About us</h6>
+            {footerJSON.about.map((item) => {
+              return (
+                <li>
+                  <a href="#">{item.name}</a>
+                </li>
+              );
+            })}
+          </ul>
         </Row>
       </Container>
     </div>
