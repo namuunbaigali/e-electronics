@@ -4,15 +4,14 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import InputGroup from "react-bootstrap/InputGroup";
 import Form from "react-bootstrap/Form";
-import { HiPaperAirplane } from "react-icons/hi";
 import { FcGoogle } from "react-icons/fc";
 import { CiFacebook } from "react-icons/ci";
-import Style from "../styles/Footer.css";
+import Style from "../../styles/Footer.css";
 import { RiSendPlaneFill } from "react-icons/ri";
 import Button from "react-bootstrap/Button";
-import head from "../Icon/headIcon.svg";
-import logo from "../Icon/Logo.svg";
-import footerJSON from "../json/footerJSON.json";
+import head from "../../Icon/headIcon.svg";
+import logo from "../../Icon/Logo.svg";
+import footerJSON from "../../json/footerJSON.json";
 
 export default function Footer() {
   return (

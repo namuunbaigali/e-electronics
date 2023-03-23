@@ -1,23 +1,12 @@
 import mongoose from "mongoose";
 
-export const User = {
-  _id: {
-    type: String,
-    default: nanoid(),
-  },
+export const UserRole = {
   name: {
     type: String,
     required: true,
   },
-
-  email: {
-    type: String,
-    unique: true,
-  },
-  role: {
-    type: String,
-    ref: "UserRole",
-  },
 };
 
-export const userSchema = new mongoose.Schema(User, { timestamps: true });
+export const userRoleSchema = new mongoose.Schema(UserRole, {
+  timestamps: true,
+});

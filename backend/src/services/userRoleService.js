@@ -1,25 +1,25 @@
-import { userSchema } from "../models/userModel";
+import { userRoleSchema } from "../models/userRoleModel";
 import mongoose from "mongoose";
 
-const userModel = mongoose.model("User", userSchema);
+const userRoleModel = mongoose.model("UserRole", userRoleSchema);
 
-export const getUsers = async () => {
-  const users = await userModel.find({});
+export const getUserRoles = async () => {
+  const users = await userRoleModel.find({});
   return users;
 };
 
-export const getUserById = async (id) => {
-  return await userModel.findById(id);
+export const getUserRoleById = async (id) => {
+  return await userRoleModel.findById(id);
 };
 
-export const createUser = async (user) => {
-  return await userModel.create(user);
+export const createUserRole = async (userRole) => {
+  return await userRoleModel.create(userRole);
 };
 
-export const updateUser = async (id, user) => {
-  return await userModel.findByIdAndUpdate(id, user, { new: true });
+export const updateUserRole = async (id, userRole) => {
+  return await userRoleModel.findByIdAndUpdate(id, userRole, { new: true });
 };
 
-export const deleteUser = async (id) => {
-  return await userModel.findByIdAndDelete(id);
+export const deleteUserRole = async (id) => {
+  return await userRoleModel.findByIdAndDelete(id);
 };
