@@ -1,4 +1,4 @@
-import { userSchema } from "../models/userModel";
+import { userSchema } from "../models/userModels";
 import mongoose from "mongoose";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";

@@ -5,7 +5,7 @@ import {
   getUserRoleById,
   getUserRoles,
   updateUserRole,
-} from "../services/userRolesService";
+} from "../services/userRoleService";
 
 const userRolesRouter = express.Router();
 

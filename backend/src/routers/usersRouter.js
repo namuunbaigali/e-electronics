@@ -1,15 +1,18 @@
 import express from "express";
+import verifyToken from "../middlewares/verifyToken";
 import {
   createUser,
   deleteUser,
   getUserById,
   getUsers,
+  loginUser,
   updateUser,
 } from "../services/usersService";
 
 const usersRouter = express.Router();
 
-usersRouter.get("/", async (req, res) => {
+usersRouter.get("/", verifyToken, async (req, res) => {
+  console.log("user is:", req.user);
   res.json(await getUsers());
 });
 

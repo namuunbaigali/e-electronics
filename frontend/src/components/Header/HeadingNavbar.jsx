@@ -15,7 +15,7 @@ function HeadingNavbar() {
           <Col xs={3} className="d-flex align-items-center justify-content-end">
             <div className="d-flex align-items-center">
               <i
-                class="bi bi-geo-alt"
+                className="bi bi-geo-alt"
                 style={{
                   fontSize: 25,
                   color: "black",
@@ -30,7 +30,7 @@ function HeadingNavbar() {
             </div>
             <div className="d-flex align-items-center">
               <i
-                class="bi bi-truck"
+                className="bi bi-truck"
                 style={{
                   fontSize: 25,
                   color: "black",

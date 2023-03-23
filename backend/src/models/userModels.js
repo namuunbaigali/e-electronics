@@ -1,12 +1,12 @@
 import mongoose from "mongoose";
 
-export const UserRole = {
+export const User = {
   name: {
     type: String,
     required: true,
   },
 };
 
-export const userRoleSchema = new mongoose.Schema(UserRole, {
+export const userSchema = new mongoose.Schema(User, {
   timestamps: true,
 });

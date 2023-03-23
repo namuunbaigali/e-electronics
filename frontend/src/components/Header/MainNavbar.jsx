@@ -3,7 +3,7 @@ import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 import Navbar from "react-bootstrap/Navbar";
 import { Col, Image, Row } from "react-bootstrap";
-import "./style.css";
+import headcss from "../../styles/header.css";
 
 function MainNavbar() {
   return (
@@ -45,7 +45,7 @@ function MainNavbar() {
           <Col xs={4} className="d-flex align-items-center justify-content-end">
             <div className="d-flex align-items-center">
               <i
-                class="bi bi-person "
+                className="bi bi-person "
                 style={{
                   fontSize: 25,
                   color: "white",
@@ -60,7 +60,7 @@ function MainNavbar() {
             </div>
             <div className="d-flex align-items-center">
               <i
-                class="bi bi-heart"
+                className="bi bi-heart"
                 style={{
                   fontSize: 25,
                   color: "white",
@@ -75,7 +75,7 @@ function MainNavbar() {
             </div>
             <div className="d-flex align-items-center">
               <i
-                class="bi bi-cart3"
+                className="bi bi-cart3"
                 style={{
                   fontSize: 25,
                   color: "white",

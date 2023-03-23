@@ -6,7 +6,7 @@ import InputGroup from "react-bootstrap/InputGroup";
 import Form from "react-bootstrap/Form";
 import { FcGoogle } from "react-icons/fc";
 import { CiFacebook } from "react-icons/ci";
-import Style from "../../styles/Footer.css";
+import "../../styles/footer.css";
 import { RiSendPlaneFill } from "react-icons/ri";
 import Button from "react-bootstrap/Button";
 import head from "../../Icon/headIcon.svg";
@@ -59,7 +59,7 @@ export default function Footer() {
             <h6> Find product</h6>
             {footerJSON.find.map((item) => {
               return (
-                <li>
+                <li key={item.id}>
                   <a href="#">{item.name}</a>
                 </li>
               );
@@ -70,7 +70,7 @@ export default function Footer() {
             <h6> Get help</h6>
             {footerJSON.get.map((item) => {
               return (
-                <li>
+                <li key={item.id}>
                   <a href="#">{item.name}</a>
                 </li>
               );
@@ -81,7 +81,7 @@ export default function Footer() {
             <h6>About us</h6>
             {footerJSON.about.map((item) => {
               return (
-                <li>
+                <li key={item.id}>
                   <a href="#">{item.name}</a>
                 </li>
               );
