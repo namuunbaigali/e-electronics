@@ -3,7 +3,7 @@ import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 import Navbar from "react-bootstrap/Navbar";
 import { Col, Image, Row } from "react-bootstrap";
-import headcss from "../../styles/header.css";
+import "../../styles/header.css";
 
 function MainNavbar() {
   return (
