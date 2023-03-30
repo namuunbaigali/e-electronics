@@ -1,0 +1,8 @@
+
+body {
+  margin: 0;
+}
+
+.leaflet-container {
+  min-height: calc(100vh - 66px);
+}
